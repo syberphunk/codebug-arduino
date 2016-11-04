@@ -1,5 +1,5 @@
 #include <Wire.h> //i2c
-#include "font4x3.h"
+#include "font4x5.h"
 
 // steps through the 4x5 font on the display one character at a time ( 1 per second)
 
@@ -30,7 +30,7 @@ void codebug_set_row ( int row, int value ) {
 }
 void codebug_display_char (int letter) {
         for (int x=0;x<5;x++) {
-          codebug_set_row(x,font[letter].line[4-x]
+          codebug_set_row(x,font[letter].line[4-x]);
           )
 }
 void loop()
